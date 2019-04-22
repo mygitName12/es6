@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+        // var  obj = {
+        //     name : 'xiaoming'
+        // }
+
+        // obj.name = 'xiaoliu'
+        // console.log(obj.name);//可写的，
+        //可配置  可以删除别的属性  
+        // console.log(delete obj.name);//返回值是true； 
+
+        // 可枚举的  
+        // for(var prop in obj){
+        //     console.log(obj[prop]);
+        // }
+        
+        
+        // 不可写,
+        Function.prototype = {
+            name : 'fxg'
+        } 
+        // 在控制台中打印  Function  => 则是Function() { [native code] }
+        //  并没有改变
+
+        // 不可以配置的  不能被删的
+        // var a = 10;
+        // console.log(window.a);
+
+        // 不可枚举的 Object.prototype
+        // var obj = {
+        //     name : 'fxg',
+        //     age : 20,
+        //     _proto_:{
+        //         sex :'male',
+        //         _proto_:{
+        //             lastName : 'xiaoming'
+        //         }
+        //     }
+        // }
+        for(var prop in Object.prototype){
+            console.log(prop)
+        }
+
+    </script> 
+</body>
+</html>

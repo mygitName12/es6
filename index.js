@@ -78,11 +78,11 @@
 //  2019-4-21 
 //解构化赋值
 
-let obj = {
-    name : '小明',
-    age : 18,
-    sex : 'female'
-};
+// let obj = {
+//     name : '小明',
+//     age : 18,
+//     sex : 'female'
+// };
 
 // 定义同名变量
 // let name , age 
@@ -201,3 +201,29 @@ let obj = {
 //     this.a = 10;
 // }
 // new sum()// 会报错
+
+// var a = "outobj"
+// // this  
+// let sum = () =>{
+//     // /this指向window
+//     console.log(this);
+// }
+// sum();
+
+// let obj = {
+//     ms : 'abc',
+//     fn () {
+//         // var self =this
+//         setTimeout(()=>{
+//             console.log(this.ms)
+//         },500)
+//     }
+// }
+// obj.fn();
+
+// // 对数组的处理
+// let arr = [10, 20, 30, 40, 50, 60];
+// console.log(arr.map(ele =>ele * ele))
+// console.log(arr.filter(ele => ele > 20))
+
+

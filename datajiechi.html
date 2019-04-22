@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="demo">
+    <div id="show"></div>
+    <script>
+        // 数据劫持
+        var oDiv = document.getElementById('show');
+        var oInput = document.getElementById('demo');
+        var oData = {
+            value : 'duyi'
+        };
+        oInput.oninput = function () {
+            oData.value = this.value;
+        };
+
+        function updata (){
+            oDiv.innerText = oData.value;
+        }
+        updata();
+        // 监测数据变化 对象的某个属性是否发生改变
+        function Observer (data){
+            if(!data || typeof data != 'object'){
+                return data;
+            };
+            // for(var prop in data){
+            // }
+            Object.keys(data).forEach(function(key){
+                defineRective(data, key, data[key])
+            })//把属性全都变道数组之中
+        }
+        function defineRective(data,key, val){
+                Object.defineProperty(data,key,{
+                    get (){
+                        return val;
+                    },
+                    set (newValue){
+                        if(newValue == val) return ;
+                        val = newValue;
+                        updata();
+                    }
+                })
+        }
+        Observer(oData);
+        console.log(oData.value);
+        // oData.value ="haha"
+    </script>
+</body>
+</html>

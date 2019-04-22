@@ -1,0 +1,13 @@
+npm init -y  跳过所有的询问
+npm install @babel/core  把写的代码变成抽象语法树  
+npm  install @babel/preset-nev  插件集合  可以有把es6转化成es5的能力
+npm install  @babel/cli  对js文件进行查找执行
+创建.babelrc配置文件严格json   
+{
+    "presets": [
+        "@babel/preset-env"
+    ]
+
+}
+
+npx babel index.js -o newindex.js
