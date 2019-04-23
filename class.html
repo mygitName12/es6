@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 实现面向对像功能
+    // 回顾es5
+     //飞机大战场景
+     Plane.prototype.fly = function(){
+         console.log('fly')
+     }
+     function Plane (){
+         this.name = "普通飞机";
+         this.blood = 100;
+         this.fly = function(){
+             console.log('fly');
+         }
+     };
+     var oplan = new Plane();
+     oplan.fly();
+     //继承  继承原型    私有属性
+
+     function attackPlane(name){
+         Plane.call(this, name);
+     }
+    </script>
+</body>
+</html>
