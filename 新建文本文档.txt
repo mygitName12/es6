@@ -1,13 +1,15 @@
-npm init -y  Ìø¹ıËùÓĞµÄÑ¯ÎÊ
-npm install @babel/core  °ÑĞ´µÄ´úÂë±ä³É³éÏóÓï·¨Ê÷  
-npm  install @babel/preset-nev  ²å¼ş¼¯ºÏ  ¿ÉÒÔÓĞ°Ñes6×ª»¯³Ées5µÄÄÜÁ¦
-npm install  @babel/cli  ¶ÔjsÎÄ¼ş½øĞĞ²éÕÒÖ´ĞĞ
-´´½¨.babelrcÅäÖÃÎÄ¼şÑÏ¸ñjson   
+npm init -y  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğµï¿½Ñ¯ï¿½ï¿½
+npm install @babel/core  ï¿½ï¿½Ğ´ï¿½Ä´ï¿½ï¿½ï¿½ï¿½É³ï¿½ï¿½ï¿½ï¿½ï·¨ï¿½ï¿½  
+npm  install @babel/preset-nev  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½Ğ°ï¿½es6×ªï¿½ï¿½ï¿½ï¿½es5ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+npm install  @babel/cli  ï¿½ï¿½jsï¿½Ä¼ï¿½ï¿½ï¿½ï¿½Ğ²ï¿½ï¿½ï¿½Ö´ï¿½ï¿½
+ï¿½ï¿½ï¿½ï¿½.babelrcï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½Ï¸ï¿½json   
 {
     "presets": [
         "@babel/preset-env"
     ]
 
 }
+
+ä»»åŠ¡æ–‡ä»¶
 
 npx babel index.js -o newindex.js
